@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> scrapper </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="https://yt3.ggpht.com/-CnPZSVzmYCw/AAAAAAAAAAI/AAAAAAAAAAA/ftmmbzulFXI/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"/>
+    <style type="text/css">
+       html {
+            overflow-y:scroll;
+        }
+        .text_color{
+            color: white;
+        }
+       a .downloadbtn{
+            right: 0;
+            position: fixed;
+            z-index: 10000;
+            bottom: 0;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+        }
+        a .downloadbtn:hover{
+            color:blue;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a class=''>
+                <button class="downloadbtn downloadSelectedVideos" title="Download selected"><i class="fa fa-cloud-download fa-2x" aria-hidden="true"> </i><span style="font-size: 30px;margin-bottom:10px;"> | Download</span></button>
+            </a>
+        <div id="sectionA"></div>
+        <div class="row">
+            <div id="progress" class="text-center" style="display:none">
+                <img src="../images/spinner.gif" />
+                <h4 class="text-center img-responsive">Loading...</h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/javascripts/jquery/dashboard.js"></script>

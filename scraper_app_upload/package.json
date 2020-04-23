@@ -1,0 +1,32 @@
+{
+  "name": "scraper_app_upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "child_process": "^1.0.2",
+    "cors": "^2.8.4",
+    "download": "^6.2.5",
+    "express": "^4.16.2",
+    "form-data": "^2.3.1",
+    "hbs": "^4.0.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^5.0.1",
+    "multer": "^1.3.0",
+    "nodemon": "^1.14.11",
+    "path": "^0.12.7",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "require-dir": "^0.3.2",
+    "worker-farm": "^1.5.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> scrapper </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="https://yt3.ggpht.com/-CnPZSVzmYCw/AAAAAAAAAAI/AAAAAAAAAAA/ftmmbzulFXI/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"/>
+    <style type="text/css">
+       html {
+            overflow-y:scroll;
+        }
+        .edit-title{
+            display:none;
+        }
+        .text_color{
+            color: white;
+        }
+       .downloadbtn{
+            right: 0;
+            position: fixed;
+            color: white;
+            z-index: 10000;
+            padding-left: 15px;
+            padding-right: 15px;
+            bottom: 0;
+            
+            margin-right: 30px;
+            margin-bottom: 30px;
+        }
+        .uploadbtn{
+            right: auto;
+            position: fixed;
+            color: white;
+            z-index: 10000;
+            padding-left: 15px;
+            padding-right: 15px;
+            bottom: 0;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+    <body>
+        <div class="container-fluid">
+                <a class="downloadbtn downloadSelectedVideos bg-primary" title=""><span class="text-white"  style="font-size: 30px;margin-bottom:10px;" aria-hidden="true"> Total videos</span><span class="total_video" style="font-size: 30px;margin-bottom:10px;"> | Download</span></a>
+                
+                <button class="uploadbtn uploadSavedVideos bg-info" title="click to upload saved" data-toggle="modal" data-target="#myModal"><span class="text-white"  style="font-size: 30px;margin-bottom:10px;" aria-hidden="true"> Upload Config</span><span class="saved_video" style="font-size: 30px;margin-bottom:10px;"> |  </span></button>
+            <div id="sectionA"></div>
+            <div class="row">
+                <div id="progress" class="text-center" style="display:none">
+                    <img src="../images/spinner.gif" />
+                    <h4 class="text-center img-responsive">Loading...</h4>
+                </div>
+            </div>
+            <div class="modal fade modalData" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Upload Configurations</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form" method="POST" action="">
+                                <input type="hidden" name="_token" value="">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="control-label">
+                                                Acceptance
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6 offset-md-1">
+                                            <div id="sectiontypeSelect"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="control-label">Enviroment</label>
+                                        </div>
+                                        <div class="col-md-6 offset-md-1">
+                                            <div id="sectionEnvSelect"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">    
+                                        <div class="col-md-4">
+                                            <label>
+                                                total videos
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6 offset-md-1">
+                                            <input type="text" class="count" name="remember" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="uploadConfigData" class="btn btn-primary">upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="/javascripts/jquery/dashboard.js"></script>
