@@ -14,7 +14,7 @@
     "child_process": "^1.0.2",
     "cors": "^2.8.4",
     "download": "^6.2.5",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "form-data": "^2.3.1",
     "hbs": "^4.0.1",
     "lodash": "^4.17.4",
